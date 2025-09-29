@@ -1,0 +1,26 @@
+Locales = Locales or {}
+Locales['en'] = {
+    hint = 'Press ~INPUT_CONTEXT~ to craft',
+    busy = 'You are already crafting.',
+    invalid_station = 'No crafting station nearby.',
+    missing_items = 'You are missing required items.',
+    missing_tools = 'Required tool missing or broken.',
+    missing_job = 'You do not have the correct job or grade.',
+    missing_level = 'Your crafting skill is too low.',
+    cooldown = 'This recipe is on cooldown.',
+    not_enough_money = 'Not enough funds.',
+    crafting_started = 'Crafting started...',
+    crafting_cancelled = 'Crafting cancelled.',
+    crafting_success = 'Crafting completed.',
+    crafting_failed = 'Crafting failed.',
+    queue_full = 'Crafting queue is full.',
+    blueprint_locked = 'You need the blueprint to see this recipe.',
+    admin_only = 'Admin only command.',
+    saved = 'Changes saved.',
+    deleted = 'Entry deleted.',
+    imported = 'Data imported.',
+    exported = 'Data exported to server console.',
+    invalid_data = 'Invalid data provided.',
+    outside_hours = 'This station is closed right now.',
+    rate_limited = 'Please wait before doing that again.'
+}
