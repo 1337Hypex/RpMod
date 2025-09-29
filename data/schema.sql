@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `crafting_stations` (
+  `id` VARCHAR(60) NOT NULL,
+  `label` VARCHAR(100) NOT NULL,
+  `type` VARCHAR(50) NOT NULL,
+  `coords` JSON NOT NULL,
+  `radius` FLOAT NOT NULL DEFAULT 2.0,
+  `job` VARCHAR(50) NULL,
+  `grade` INT NOT NULL DEFAULT 0,
+  `items` JSON NULL,
+  `hours` JSON NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `crafting_recipes` (
+  `id` VARCHAR(60) NOT NULL,
+  `label` VARCHAR(100) NOT NULL,
+  `station` VARCHAR(50) NOT NULL,
+  `data` JSON NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

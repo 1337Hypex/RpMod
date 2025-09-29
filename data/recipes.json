@@ -1,0 +1,99 @@
+[
+  {
+    "id": "repair_kit",
+    "label": "Advanced Repair Kit",
+    "station": "workbench",
+    "inputs": [{"item": "metalscrap", "count": 20}, {"item": "plastic", "count": 10}],
+    "outputs": [{"item": "advancedrepairkit", "count": 1}],
+    "time": 12000,
+    "tools": ["wrench"],
+    "job": "mechanic",
+    "grade": 2,
+    "cooldown": 30,
+    "fee": 150,
+    "feeAccount": "society_mechanic",
+    "minigame": true
+  },
+  {
+    "id": "engine_part",
+    "label": "Engine Block",
+    "station": "forge",
+    "inputs": [{"item": "iron", "count": 15}, {"item": "aluminum", "count": 5}],
+    "outputs": [{"item": "engineblock", "count": 1}],
+    "time": 15000,
+    "tools": ["hammer"],
+    "job": "mechanic",
+    "grade": 1,
+    "cooldown": 60,
+    "durability": {"tool": 5},
+    "quality": {"min": 90, "max": 110}
+  },
+  {
+    "id": "grilled_burger",
+    "label": "Grilled Burger",
+    "station": "kitchen",
+    "inputs": [{"item": "rawpatty", "count": 1}, {"item": "bread", "count": 2}],
+    "outputs": [{"item": "burger", "count": 1, "metadata": {"quality": 100}}],
+    "time": 6000,
+    "tools": ["spatula"],
+    "fee": 25,
+    "feeType": "cash",
+    "blueprint": "burger_blueprint"
+  },
+  {
+    "id": "energy_drink",
+    "label": "Energy Drink",
+    "station": "kitchen",
+    "inputs": [{"item": "sugar", "count": 2}, {"item": "water", "count": 1}],
+    "outputs": [{"item": "energydrink", "count": 1}],
+    "time": 8000,
+    "tools": ["chemset"],
+    "job": null,
+    "accountMoney": {"account": "bank", "amount": 50}
+  },
+  {
+    "id": "pickaxe",
+    "label": "Steel Pickaxe",
+    "station": "forge",
+    "inputs": [{"item": "iron", "count": 10}, {"item": "wood", "count": 5}],
+    "outputs": [{"item": "pickaxe", "count": 1, "metadata": {"durability": 100}}],
+    "time": 14000,
+    "tools": [],
+    "job": "miner",
+    "grade": 0,
+    "cooldown": 45
+  },
+  {
+    "id": "bandage",
+    "label": "Sterile Bandage",
+    "station": "workbench",
+    "inputs": [{"item": "gauze", "count": 2}, {"item": "alcohol", "count": 1}],
+    "outputs": [{"item": "bandage", "count": 1}],
+    "time": 5000,
+    "tools": ["scissors"],
+    "cooldown": 5
+  },
+  {
+    "id": "radio",
+    "label": "Encrypted Radio",
+    "station": "workbench",
+    "inputs": [{"item": "metalscrap", "count": 5}, {"item": "copper", "count": 8}, {"item": "plastic", "count": 5}],
+    "outputs": [{"item": "radio", "count": 1, "metadata": {"encrypted": true}}],
+    "time": 10000,
+    "tools": ["screwdriver"],
+    "job": "mechanic",
+    "grade": 1,
+    "cooldown": 20
+  },
+  {
+    "id": "lockpick",
+    "label": "Slim Lockpick",
+    "station": "workbench",
+    "inputs": [{"item": "metalscrap", "count": 3}, {"item": "steel", "count": 2}],
+    "outputs": [{"item": "lockpick", "count": 1}],
+    "time": 7000,
+    "tools": [],
+    "cooldown": 15,
+    "minigame": false
+  }
+]

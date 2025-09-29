@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>RP Crafting</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="root" class="hidden">
+        <div class="overlay"></div>
+        <div class="container">
+            <header>
+                <div class="title">
+                    <h1 id="menu-title">Crafting Station</h1>
+                    <p id="menu-subtitle"></p>
+                </div>
+                <div class="actions">
+                    <input id="search" type="text" placeholder="Search recipes" />
+                    <button id="close-btn" class="ghost">Close</button>
+                </div>
+            </header>
+            <nav class="tabs">
+                <button data-tab="recipes" class="active">Recipes</button>
+                <button data-tab="queue">Queue</button>
+                <button data-tab="blueprints">Blueprints</button>
+            </nav>
+            <main>
+                <section id="tab-recipes" class="tab active">
+                    <div class="list" id="recipe-list"></div>
+                    <div class="details" id="recipe-details">
+                        <div class="placeholder">Select a recipe to view details.</div>
+                    </div>
+                </section>
+                <section id="tab-queue" class="tab">
+                    <div id="queue-list" class="queue"></div>
+                    <button id="cancel-craft" class="danger">Cancel Current Craft</button>
+                </section>
+                <section id="tab-blueprints" class="tab">
+                    <div id="blueprint-list" class="grid"></div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="admin" class="hidden">
+        <div class="overlay"></div>
+        <div class="container admin">
+            <header>
+                <div class="title">
+                    <h1>Crafting Admin</h1>
+                    <p>Manage stations and recipes</p>
+                </div>
+                <div class="actions">
+                    <button id="admin-close" class="ghost">Close</button>
+                </div>
+            </header>
+            <nav class="tabs">
+                <button data-tab="admin-stations" class="active">Stations</button>
+                <button data-tab="admin-recipes">Recipes</button>
+                <button data-tab="admin-settings">Settings</button>
+            </nav>
+            <main>
+                <section id="tab-admin-stations" class="tab active">
+                    <div class="list" id="station-list"></div>
+                    <div class="details" id="station-details"></div>
+                </section>
+                <section id="tab-admin-recipes" class="tab">
+                    <div class="list" id="admin-recipe-list"></div>
+                    <div class="details" id="admin-recipe-details"></div>
+                </section>
+                <section id="tab-admin-settings" class="tab">
+                    <div class="settings">
+                        <label>
+                            <span>Toggle Minigame</span>
+                            <input type="checkbox" id="setting-minigame" />
+                        </label>
+                        <label>
+                            <span>Use Animations</span>
+                            <input type="checkbox" id="setting-animations" checked />
+                        </label>
+                        <label>
+                            <span>Use Durability</span>
+                            <input type="checkbox" id="setting-durability" checked />
+                        </label>
+                        <label>
+                            <span>Charge Crafting Fees</span>
+                            <input type="checkbox" id="setting-fees" checked />
+                        </label>
+                        <label>
+                            <span>Export Stations</span>
+                            <button data-export="stations">Export</button>
+                        </label>
+                        <label>
+                            <span>Export Recipes</span>
+                            <button data-export="recipes">Export</button>
+                        </label>
+                        <label>
+                            <span>Import JSON</span>
+                            <textarea id="import-json" placeholder="Paste JSON here"></textarea>
+                            <div class="import-actions">
+                                <button data-import="stations">Import Stations</button>
+                                <button data-import="recipes">Import Recipes</button>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <div id="progress" class="hidden">
+        <div class="progress-wrapper">
+            <div class="progress-bar">
+                <div class="progress-value"></div>
+            </div>
+            <p id="progress-label"></p>
+        </div>
+    </div>
+
+    <div id="minigame" class="hidden">
+        <div class="minigame-card">
+            <h2>Timing Check</h2>
+            <div class="minigame-area">
+                <div class="track">
+                    <div class="target"></div>
+                    <div class="cursor"></div>
+                </div>
+                <button id="minigame-button">Stop</button>
+                <p>Stop the cursor inside the highlighted zone.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

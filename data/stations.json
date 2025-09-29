@@ -1,0 +1,35 @@
+[
+  {
+    "id": "workbench_vespucci",
+    "label": "Vespucci Workshop",
+    "type": "workbench",
+    "coords": [ -1153.2, -2006.7, 13.2 ],
+    "radius": 2.5,
+    "job": "mechanic",
+    "grade": 1,
+    "items": [],
+    "hours": { "open": 8, "close": 20 }
+  },
+  {
+    "id": "kitchen_sandy",
+    "label": "Sandy Kitchen",
+    "type": "kitchen",
+    "coords": [ 1960.8, 3740.2, 32.3 ],
+    "radius": 2.0,
+    "job": null,
+    "grade": 0,
+    "items": ["kitchen_pass"],
+    "hours": null
+  },
+  {
+    "id": "forge_mine",
+    "label": "Mining Forge",
+    "type": "forge",
+    "coords": [ 2823.4, 2796.5, 57.9 ],
+    "radius": 3.0,
+    "job": "miner",
+    "grade": 0,
+    "items": [],
+    "hours": { "open": 0, "close": 24 }
+  }
+]
